@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:id="@+id/textViewMaSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#002200"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewTenSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#002200"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" >
+
+        <TextView
+            android:id="@+id/textViewNganhHoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#002200"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textViewTenLopsv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#002200"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="31dp" >
+
+        <TextView
+            android:id="@+id/textViewNgaySinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#002200"
+            android:layout_gravity="center_vertical"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textViewGioiTinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#002200"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+</LinearLayout>
