@@ -61,7 +61,7 @@
             android:layout_height="60dp" >
 
             <TextView
-                android:id="@+id/txt1"
+                android:id="@+id/txtSdt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

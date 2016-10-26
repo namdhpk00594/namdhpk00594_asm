@@ -1,6 +1,8 @@
-package com.example.namdhpk00594_asm;
+package manhinhquanly.com;
 
 import java.util.ArrayList;
+
+import com.example.namdhpk00594_asm.R;
 
 import Adapter.com.StudentAdapter;
 import android.app.Activity;
@@ -186,7 +188,7 @@ public class QLSV extends Activity {
 		danhsachsv=dbsv.GetAllStudentDB();
 		studentadapter = new StudentAdapter(getApplicationContext(),R.layout.row_student,danhsachsv);
 		listViewStudent.setAdapter(studentadapter);
-		Toast.makeText(QLSV.this,"Đã xóa", Toast.LENGTH_LONG).show();
+		Toast.makeText(QLSV.this,"�?ã xóa", Toast.LENGTH_LONG).show();
 	}
 
 }

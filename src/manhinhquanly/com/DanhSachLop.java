@@ -1,6 +1,8 @@
-package com.example.namdhpk00594_asm;
+package manhinhquanly.com;
 
 import java.util.ArrayList;
+
+import com.example.namdhpk00594_asm.R;
 
 import Adapter.com.ClassAdapter;
 import Adapter.com.StudentAdapter;
@@ -170,7 +172,7 @@ public class DanhSachLop extends Activity {
 		danhsachlop=db.GetAllClassDB();
 		classadpter = new ClassAdapter(getApplicationContext(), R.layout.item, danhsachlop);
 		listViewClass.setAdapter(classadpter);
-		Toast.makeText(DanhSachLop.this, "Đã xóa", Toast.LENGTH_LONG).show();
+		Toast.makeText(DanhSachLop.this, "�?ã xóa", Toast.LENGTH_LONG).show();
 	}
 	
 }

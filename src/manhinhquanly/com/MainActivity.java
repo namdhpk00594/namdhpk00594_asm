@@ -1,8 +1,8 @@
-package com.example.namdhpk00594_asm;
+package manhinhquanly.com;
 
 import java.util.ArrayList;
 
-
+import com.example.namdhpk00594_asm.R;
 import com.navdrawer.SimpleSideDrawer;
 
 import android.app.Activity;
@@ -21,7 +21,7 @@ import model.com.ClassDB;
 import model.com.Connect_DB;
 
 public class MainActivity extends Activity {
-	Button btnXemDS, btnQLSV;
+	Button btnXemDS, btnQLSV, btnAboutMe;
 	Connect_DB db;
 	final ClassDB lop=new ClassDB();
 	ListView listViewClass;
@@ -38,11 +38,22 @@ public class MainActivity extends Activity {
 		slide_me.setLeftBehindContentView(R.layout.left_menu);
 		
 		imgMenu = findViewById(R.id.imgMenu);
-		txt1 = (TextView) findViewById(R.id.txt1);
+		txt1 = (TextView) findViewById(R.id.txtSdt);
 		txt2 = (TextView) findViewById(R.id.txt2);
 		txt3 = (TextView) findViewById(R.id.txt3);
 		btnXemDS = (Button)findViewById(R.id.btnXemDS);
 		btnQLSV = (Button)findViewById(R.id.btnQLSV);
+		btnAboutMe = (Button) findViewById(R.id.btnAboutMe);
+		
+		btnAboutMe.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),AboutMe.class);
+				startActivity(intent);
+				
+			}
+		});
 		
 		imgMenu.setOnClickListener(new View.OnClickListener() {
 			
@@ -74,7 +85,8 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub				
+				Intent intent = new Intent(getApplicationContext(),AboutMe.class);
+				startActivity(intent);			
 			}
 		});
 		
