@@ -17,7 +17,6 @@
         android:id="@+id/txtNhan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="Họ và tên: Đặng Hoài Nam"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -25,7 +24,6 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="MSSV: namdhpk00594"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -33,7 +31,6 @@
         android:id="@+id/txtSdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="SDT: 01695162348"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -41,7 +38,6 @@
         android:id="@+id/txtMail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="Email: namdhpk00594@fpt.edu.vn"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -49,7 +45,6 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="LTMT khóa 11.3"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
