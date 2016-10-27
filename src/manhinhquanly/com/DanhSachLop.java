@@ -51,6 +51,8 @@ public class DanhSachLop extends Activity {
 				Button btnAddClass = (Button) dialog.findViewById(R.id.btnAddClass);
 				Button btnThoat = (Button) dialog.findViewById(R.id.btnThoat);
 				
+				
+				
 				btnAddClass.setOnClickListener(new View.OnClickListener() {
 					
 					@Override
@@ -144,6 +146,10 @@ public class DanhSachLop extends Activity {
 		Button btnOKSua = (Button) dialogSua.findViewById(R.id.btnOKSuaSV);
 		Button btnThoatSua = (Button) dialogSua.findViewById(R.id.btnThoatSuaSV);
 		
+		ClassDB lb = db.GetClassDB(id);
+		txtSuaMaLop.setText(lb.getMaLop());
+		txtSuaTenLop.setText(lb.getTenLop());
+		
 		btnOKSua.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -172,7 +178,7 @@ public class DanhSachLop extends Activity {
 		danhsachlop=db.GetAllClassDB();
 		classadpter = new ClassAdapter(getApplicationContext(), R.layout.item, danhsachlop);
 		listViewClass.setAdapter(classadpter);
-		Toast.makeText(DanhSachLop.this, "�?ã xóa", Toast.LENGTH_LONG).show();
+		Toast.makeText(DanhSachLop.this, "�?ã xóa", Toast.LENGTH_LONG).show();
 	}
 	
 }

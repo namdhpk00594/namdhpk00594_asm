@@ -91,6 +91,24 @@ public class Connect_DB extends SQLiteOpenHelper{
 		return dsLop;	
 	}
 	
+	public ClassDB GetClassDB(int id){
+		
+		ClassDB dsLop = new ClassDB();
+		String cautruyvan = "SELECT * FROM "+Table_Class+" WHERE ID = "+id;
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(cautruyvan, null);
+		
+		if(cursor.moveToFirst()){
+			do{	
+				dsLop.setID(cursor.getInt(0));
+				dsLop.setMaLop(cursor.getString(1));
+				dsLop.setTenLop(cursor.getString(2)); 
+			}while(cursor.moveToNext());
+		}
+		
+		return dsLop;	
+	}
+	
 	public ArrayList<StudentDB> GetAllStudentDB(){
 		ArrayList<StudentDB> dsSinhVien = new ArrayList<StudentDB>();
 		String cautruyvan = "SELECT * FROM " + Table_Student;
@@ -109,6 +127,27 @@ public class Connect_DB extends SQLiteOpenHelper{
 				sv.setNgaySinhString(cursor.getString(cursor.getColumnIndex(Student_NgaySinh)));
 				sv.setGioiTinh(cursor.getString(cursor.getColumnIndex(Student_GioiTinh)));
 				dsSinhVien.add(sv);
+			}while(cursor.moveToNext());
+		}
+		return dsSinhVien;
+	}
+	
+	public StudentDB GetStudent(int id){
+		StudentDB dsSinhVien = new StudentDB();
+		String cautruyvan = "SELECT * FROM " + Table_Student+" WHERE "+Student_ID_SV+" = "+ String.valueOf(id);
+		SQLiteDatabase svdb = this.getReadableDatabase();
+		
+		Cursor cursor = svdb.rawQuery(cautruyvan, null);
+		if(cursor.moveToFirst()){
+			do{
+				dsSinhVien.setID_SV(cursor.getInt(cursor.getColumnIndex(Student_ID_SV)));
+				dsSinhVien.setID_Lop(cursor.getInt(cursor.getColumnIndex(Student_ID_Lop)));
+				dsSinhVien.setMaSV(cursor.getString(cursor.getColumnIndex(Student_MaSV)));
+				dsSinhVien.setTenSV(cursor.getString(cursor.getColumnIndex(Student_TenSV)));
+				dsSinhVien.setTenLop(cursor.getString(cursor.getColumnIndex(Student_TenLop)));
+				dsSinhVien.setNganhHoc(cursor.getString(cursor.getColumnIndex(Student_NganhHoc)));
+				dsSinhVien.setNgaySinhString(cursor.getString(cursor.getColumnIndex(Student_NgaySinh)));
+				dsSinhVien.setGioiTinh(cursor.getString(cursor.getColumnIndex(Student_GioiTinh)));
 			}while(cursor.moveToNext());
 		}
 		return dsSinhVien;

@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mã SV: "
+                android:text="Tên SV: "
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tên SV: "
+                android:text="Mã SV: "
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText

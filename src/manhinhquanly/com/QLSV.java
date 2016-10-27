@@ -22,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import model.com.ClassDB;
 import model.com.Connect_DB;
 import model.com.StudentDB;
 
@@ -86,6 +87,14 @@ public class QLSV extends Activity {
 		
 		Button btnOKSuaSV = (Button)dialogSuaSV.findViewById(R.id.btnOKSuaSV);
 		Button btnThoatSuaSV = (Button)dialogSuaSV.findViewById(R.id.btnThoatSuaSV);
+		
+		StudentDB lb = dbsv.GetStudent(id);
+		txtSuaMaSV.setText(lb.getMaSV());
+		txtSuaTenSV.setText(lb.getTenSV());
+		txtSuaNganhHoc.setText(lb.getNganhHoc());
+		txtSuaTenLopSV.setText(lb.getTenLop());
+		txtSuaNgaySinh.setText(lb.getNgaySinh());
+		txtSuaGioiTinh.setText(lb.getGioiTinh());
 		
 		btnOKSuaSV.setOnClickListener(new View.OnClickListener() {
 			
@@ -188,7 +197,7 @@ public class QLSV extends Activity {
 		danhsachsv=dbsv.GetAllStudentDB();
 		studentadapter = new StudentAdapter(getApplicationContext(),R.layout.row_student,danhsachsv);
 		listViewStudent.setAdapter(studentadapter);
-		Toast.makeText(QLSV.this,"�?ã xóa", Toast.LENGTH_LONG).show();
+		Toast.makeText(QLSV.this,"�?ã xóa", Toast.LENGTH_LONG).show();
 	}
 
 }
